@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+</style>
+</head>
+<body>
+
+
+
+
+ <div class="row  header">
+
+    <a href="#" class="col-6  col-lg-2" onclick="user(event)"><i class="fa fa-home"></i>Logo</a>
+    <a href="#" class="btn  d-none d-lg-block col-lg-1" title="News"><i class="fa fa-globe"></i></a>
+    <a href="#" class="btn  d-none d-lg-block col-lg-1" title="Account Settings"><i class="fa fa-user"></i></a>
+    <a href="#" class="btn  d-none d-lg-block col-lg-1" title="Messages"><i class="fa fa-envelope"></i></a>
+    <div class=" d-none d-lg-block col-lg-1 position-relative">
+    <button onclick="nof()" class="btn text-light " title="Notifications"><i class="fa fa-bell"></i><sup><span class="rounded-circle  bg-success badge">3</span></sup></button>
+    <div  class="drop card position-absolute z-1" style="top: 37%;left:5%; " id="dropnof">
+       <div class="nof" style="width:300px; color: black;">
+        <a href="#" class="">One new friend request</a>
+        <a href="#" class="">John Doe posted on your wall</a>
+        <a href="#" class="">Jane likes your post</a>
+      </div>
+    </div>
+  
+  
+  </div>
+    <span class="d-none d-lg-block  col-lg-4"></span>
+    <a href="#" class="d-none d-lg-block  col-lg-2 text-end" title="My Account">
+      <img src="/images/avatar2.png" class="rounded-circle" style="height:23px;width:23px" alt="Avatar">
+    </a>
+    
+   <div class="col-6  d-block d-lg-none">
+    <button class=" float-end btn btn-secondary " href="" onclick="openNav()"><i class="fa fa-bars"></i></button>
+   </div>
+   
+ 
+</div>
+
+
+
+
+
+  <div  class="drop-list  drop" id="dropdown">
+    <a href="#" class="text-light p-3 fs-2 nv-sm">Link 1</a>
+    <a href="#" class=" text-light p-3 fs-2 nv-sm">Link 2</a>
+    <a href="#" class="text-light p-3 fs-2 nv-sm">Link 3</a>
+    <a href="#" class="text-light p-3 fs-2 nv-sm">My Profile</a>
+  </div>
+
+
+
+
+<div class="row">
+<div class="col-lg-3 col-md-2 col-sm-12">
+  
+<div class="card">
+<h1 class="text-center">My Profile</h1>
+<img src="images/avatar2.png" class="rounded-circle mx-auto d-block" width="100">
+<span><i class="fa fa-pencil fa-fw mg fc"></i> Designer, UI</span>
+<span><i class="fa fa-home fa-fw fc mg"></i>  London, UK</span>
+<span><i class="fa fa-birthday-cake fa-fw fc mg"></i> April 1, 1988</span>
+</div>
+
+
+
+  <div class="w3-white">
+    <button onclick="myFunction('Demo1')" class="nv-sm text-sm-start "><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
+    <div id="Demo1" class="drop para">
+      <p>Some text..</p>
+    </div>
+    <button onclick="myFunction('Demo2')" class="nv-sm text-sm-start"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
+    <div id="Demo2" class="drop para">
+      <p>Some other text..</p>
+    </div>
+    <button onclick="myFunction('Demo3')" class="nv-sm text-sm-start"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+    <div id="Demo3" class="drop para">
+      <p>Some other text..</p>
+    </div>
+</div>
+
+
+<div class="card d-none d-lg-block">
+  <p>Interests</p>
+  <p>
+    <span class="span-block ">News</span>
+    <span class="span-block ">W3Schools</span>
+    <span class="span-block ">Labels</span>
+    <span class="span-block ">Games</span>
+    <span class="span-block ">Friends</span>
+    <span class="span-block ">Games</span>
+    <span class="span-block ">Friends</span>
+    <span class="span-block ">Food</span>
+    <span class="span-block ">Design</span>
+    <span class="span-block ">Art</span>
+    <span class="span-block ">Photos</span>
+  </p>
+</div>
+
+<div class="card  rounded w3-theme-l4 border d-none  d-lg-block  ">
+  <span onclick="this.parentElement.style.display='none'" class="btn right bg-body-secondary position-absolute top-0 end-0 ">
+    <i class="fa fa-remove"></i>
+  </span>
+  <p><strong>Hey!</strong></p>
+  <p>People are looking at your profile. Find out who.</p>
+</div>
+
+
+</div>
+
+
+<!-- middle -->
+<div class="col-lg-7 col-md-8 col-sm-12">
+
+
+
+<div class="card post">
+    
+  <div class="">
+
+          <h6 class="w3-opacity" style="color: gray;">Social Media template by w3.css</h6>
+          <p contenteditable="true" class=" border" id="post">Status: Feeling Blue</p>
+          <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i> &nbsp;Post</button> 
+    </div>
+  </div>
+
+
+
+
+
+  <div class="card post"><br>
+    <div class="haeder-post">
+    <img src="/images/avatar2.png" alt="Avatar" class="m-1 rounded-circle " style="width:60px">
+    <span class="right">1 min</span>
+    <h4 class="" style="display: inline-block;">John Doe</h4><br>
+    </div>
+    <hr >
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="row" style="margin:0 -16px">
+      
+          <div class="col-sm-12 col-lg-6">
+            <img src="/images/lights.jpg" style="width:90%" alt="Northern Lights" class="rounded ">
+          </div>
+        <div class="col-sm-12 col-lg-6">
+          <img src="/images/nature.jpg" style="width:90%" alt="Nature" class="rounded " >
+        </div>
+        
+          
+      </div>
+    
+   <div>
+    <button type="button" class="col-3"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button> 
+    <button type="button" class="col-4"><i class="fa fa-comment"></i> &nbsp;Comment</button> 
+   </div>
+  </div>
+
+
+
+
+  <div class="card post"><br>
+    <div class="haeder-post">
+      <img src="/images/avatar5.png" alt="Avatar" class="m-1 rounded-circle" style="width:60px">
+    <span class="right">16 min</span>
+    <h4 style="display: inline-block;"> Jane Doe</h4><br>
+    </div>
+    <hr >
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+   <div>
+    <button type="button" class="col-3"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button> 
+    <button type="button" class="col-4"><i class="fa fa-comment"></i> &nbsp;Comment</button> 
+   </div>
+  </div>  
+
+
+
+
+  <div class="card post"><br>
+   <div>
+    <img src="/images/avatar6.png" alt="Avatar" class="m-1 rounded-circle" style="width:60px">
+    <span class="right">32 min</span>
+    <h4  style="display: inline-block;">Angie Jane</h4><br>
+   </div>
+    <hr>
+    <p>Have you seen this?</p>
+
+    <div class="" style="margin:0 -16px">
+      
+      <img src="/images/nature.jpg" style="width:90%" alt="Northern Lights" class="rounded">
+    
+  </div>
+    <img src="" style="width:100%" class="w3-margin-bottom">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+   <div>
+    <button type="button" class="col-3"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button> 
+    <button type="button" class="col-4"><i class="fa fa-comment"></i> &nbsp;Comment</button> 
+
+   </div>
+  </div> 
+
+</div>
+
+
+  <div class="col-lg-2 col-md-2 col-sm-12">
+    <div class="card post">
+      <div class="text-center">
+        <p>Upcoming Events:</p>
+        <img src="/images/forest.jpg" alt="Forest" style="width:90%;">
+        <p><strong>Holiday</strong></p>
+        <p>Friday 15:00</p>
+        <p><button class="col-12">Info</button></p>
+      </div>
+    </div>
+    <br>
+    
+    <div class="card post">
+      <div class="text-center">
+        <p>Friend Request</p>
+        <img src="/images/avatar6.png" alt="Avatar" style="width:50%"><br>
+        <span>Jane Doe</span>
+        <div class="row">
+          <div class="mt-3 mb-2">
+            <button class="col-12 btn btn-success  w3-section" title="Accept"><i class="fa fa-check"></i></button>
+          </div>
+          <div class="mb-2 mt-3">
+            <button class="col-12 btn btn-danger w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    <div class="card text-center pt-3">
+      <p>ADS</p>
+    </div>
+    <br>
+    
+    <div class="card text-center pt-3">
+      <p><i class="fa fa-bug w3-xxlarge fs-1"></i></p>
+    </div>
+    
+  <!-- End Right Column -->
+  </div>
+
+  </div>
+  
+<!-- End Grid -->
+
+
+<!-- End Page Container -->
+
+<br>
+
+<!-- Footer -->
+<footer class="drop-list p-4" style="height: 70px;">
+<h5>Footer</h5>
+</footer>
+
+
+
+
+
+
+
+
+<script>
+
+function myFunction(id) {
+  var x = document.getElementById(id);
+  x.classList.toggle("drop");
+}
+
+function openNav() {
+  let dropdown=document.getElementById("dropdown");
+  dropdown.classList.toggle("drop");
+  
+}
+function nof(){
+  console.log("nkbkkbxb ");
+  let dropdown=document.getElementById("dropnof");
+  dropdown.classList.toggle("drop");
+  
+  
+}
+
+function user(e){
+  e.preventDefault()
+  if(e.target.textContent=="Ahmed Mohammed shaban")
+      {
+        e.target.innerHTML="";
+        e.target.innerHTML=" <i class='fa fa-home'></i>Logo";
+        e.target.style="font-size:30px;padding-top:7px";
+      }
+      else{
+        e.target.textContent="Ahmed Mohammed shaban";
+        e.target.style="font-size:11px;padding-top:17px";
+      }
+ 
+}
+let post=document.getElementById("post");
+console.log(post.textContent);
+console.log()
+</script>
+
+</body>
+</html> 
+
+
+
