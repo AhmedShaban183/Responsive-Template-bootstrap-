@@ -1,6 +1,4 @@
-.nobar{
-    /* display: none; */
-}
+
 
 .bar{
     display: flex;
@@ -41,6 +39,9 @@ a{
     background-color: #4D636F;
     color:white;
     font-size: 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
 }
 .header a{
     color: white;

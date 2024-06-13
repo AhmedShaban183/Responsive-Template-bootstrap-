@@ -17,39 +17,40 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
 
 
+  
  <div class="row  header">
 
-    <a href="#" class="col-6  col-lg-2" onclick="user(event)"><i class="fa fa-home"></i>Logo</a>
-    <a href="#" class="btn  d-none d-lg-block col-lg-1" title="News"><i class="fa fa-globe"></i></a>
-    <a href="#" class="btn  d-none d-lg-block col-lg-1" title="Account Settings"><i class="fa fa-user"></i></a>
-    <a href="#" class="btn  d-none d-lg-block col-lg-1" title="Messages"><i class="fa fa-envelope"></i></a>
-    <div class=" d-none d-lg-block col-lg-1 position-relative">
-    <button onclick="nof()" class="btn text-light " title="Notifications"><i class="fa fa-bell"></i><sup><span class="rounded-circle  bg-success badge">3</span></sup></button>
-    <div  class="drop card position-absolute z-1" style="top: 37%;left:5%; " id="dropnof">
-       <div class="nof" style="width:300px; color: black;">
-        <a href="#" class="">One new friend request</a>
-        <a href="#" class="">John Doe posted on your wall</a>
-        <a href="#" class="">Jane likes your post</a>
-      </div>
+  <a href="#" class="col-6  col-lg-2" onclick="user(event)" id="logo"><i class="fa fa-home"></i>Logo</a>
+  <a href="#" class="btn  d-none d-lg-block col-lg-1" title="News"><i class="fa fa-globe"></i></a>
+  <a href="#" class="btn  d-none d-lg-block col-lg-1" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="#" class="btn  d-none d-lg-block col-lg-1" title="Messages"><i class="fa fa-envelope"></i></a>
+  <div class=" d-none d-lg-block col-lg-1 position-relative">
+  <button onclick="nof()" class="btn text-light " title="Notifications"><i class="fa fa-bell"></i><sup><span class="rounded-circle  bg-success badge">3</span></sup></button>
+  <div  class="drop card position-absolute z-1" style="top: 37%;left:5%; " id="dropnof">
+     <div class="nof" style="width:300px; color: black;">
+      <a href="#" class="">One new friend request</a>
+      <a href="#" class="">John Doe posted on your wall</a>
+      <a href="#" class="">Jane likes your post</a>
     </div>
-  
-  
   </div>
-    <span class="d-none d-lg-block  col-lg-4"></span>
-    <a href="#" class="d-none d-lg-block  col-lg-2 text-end" title="My Account">
-      <img src="/images/avatar2.png" class="rounded-circle" style="height:23px;width:23px" alt="Avatar">
-    </a>
-    
-   <div class="col-6  d-block d-lg-none">
-    <button class=" float-end btn btn-secondary " href="" onclick="openNav()"><i class="fa fa-bars"></i></button>
-   </div>
-   
+
+
+</div>
+  <span class="d-none d-lg-block  col-lg-4"></span>
+  <a href="#" class="d-none d-lg-block  col-lg-2 text-end" title="My Account">
+    <img src="/images/avatar2.png" class="rounded-circle" style="height:23px;width:23px" alt="Avatar">
+  </a>
+  
+ <div class="col-6  d-block d-lg-none">
+  <button class=" float-end btn btn-secondary " href="" onclick="openNav()"><i class="fa fa-bars"></i></button>
+ </div>
  
+
 </div>
 
+<div style="width: 100%;height: 50px;">
 
-
-
+</div>
 
   <div  class="drop-list  drop" id="dropdown">
     <a href="#" class="text-light p-3 fs-2 nv-sm">Link 1</a>
@@ -60,7 +61,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
 
 
-
+<!-- start Page Container -->
 <div class="row">
 <div class="col-lg-3 col-md-2 col-sm-12">
   
@@ -107,7 +108,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   </p>
 </div>
 
-<div class="card  rounded w3-theme-l4 border d-none  d-lg-block  ">
+<div class="card  rounded  border d-none  d-lg-block  ">
   <span onclick="this.parentElement.style.display='none'" class="btn right bg-body-secondary position-absolute top-0 end-0 ">
     <i class="fa fa-remove"></i>
   </span>
@@ -120,17 +121,21 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
 
 <!-- middle -->
-<div class="col-lg-7 col-md-8 col-sm-12">
+<div class="col-lg-7 col-md-8 col-sm-12" id="append">
 
 
-
+<!-- add post  -->
 <div class="card post">
     
   <div class="">
 
           <h6 class="w3-opacity" style="color: gray;">Social Media template by w3.css</h6>
+         
           <p contenteditable="true" class=" border" id="post">Status: Feeling Blue</p>
-          <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i> &nbsp;Post</button> 
+          <input type="file" id="imageInput" accept="image/*" >
+          <br>
+          <button type="submit" class="w3-button w3-theme" id="imageUploadForm" onclick="add(event)"><i class="fa fa-pencil"></i> &nbsp;Post</button>
+         
     </div>
   </div>
 
@@ -207,6 +212,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
    </div>
   </div> 
 
+  <div id="imagePreview"></div>
+
+
 </div>
 
 
@@ -253,10 +261,10 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
   </div>
   
-<!-- End Grid -->
-
-
 <!-- End Page Container -->
+
+
+
 
 <br>
 
@@ -294,21 +302,111 @@ function nof(){
 
 function user(e){
   e.preventDefault()
-  if(e.target.textContent=="Ahmed Mohammed shaban")
+  let logo=document.getElementById("logo");
+  if(logo.textContent=="Ahmed Mohammed shaban")
       {
-        e.target.innerHTML="";
-        e.target.innerHTML=" <i class='fa fa-home'></i>Logo";
-        e.target.style="font-size:30px;padding-top:7px";
+        logo.innerHTML="";
+        logo.innerHTML=" <i class='fa fa-home'></i>Logo";
+        logo.style="font-size:30px;padding-top:7px";
       }
       else{
-        e.target.textContent="Ahmed Mohammed shaban";
-        e.target.style="font-size:11px;padding-top:17px";
+        logo.innerHTML="";
+        logo.textContent="Ahmed Mohammed shaban";
+        logo.style="font-size:11px;padding-top:17px";
       }
  
 }
-let post=document.getElementById("post");
-console.log(post.textContent);
-console.log()
+
+
+
+
+// document.getElementById('imageUploadForm').addEventListener('click', 
+
+function add(event) {
+     event.preventDefault(); // Prevent the default form submission
+    let post=document.getElementById("post");
+    
+    const imageInput = document.getElementById('imageInput');
+    let apend_post=document.getElementById("append")
+    const file = imageInput.files[0];
+console.log("hello post")
+    if (file) {
+        const formData = new FormData();
+        formData.append('image', file);
+        // Display preview of the image
+        console.log("fshkfgshkd")
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+         
+          console.log()
+            apend_post.innerHTML+=` <div class="card post"><br>
+   <div>
+    <img src="/images/me.jpg" alt="Avatar" class="m-1 rounded-circle" style="width:60px; height:60px;">
+    <span class="right text-success">now</span>
+    <h4  style="display: inline-block;">Ahmed M.Shaban</h4><br>
+   </div>
+    <hr>
+    <p>${post.textContent}</p>
+
+    <div class="" style="margin:0 -16px">
+      
+      <img src="${e.target.result}" style="width:90%" alt="Northern Lights" class="rounded">
+    
+  </div>
+    <img src="" style="width:100%" class="w3-margin-bottom">
+    
+   <div>
+    <button type="button" class="col-3"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button> 
+    <button type="button" class="col-4"><i class="fa fa-comment"></i> &nbsp;Comment</button> 
+
+   </div>
+  </div> 
+ `
+        }
+        reader.readAsDataURL(file);
+       
+    } else {
+      apend_post.innerHTML+=`<div class="card post"><br>
+    <div class="haeder-post">
+      <img src="/images/me.jpg" alt="Avatar" class="m-1 rounded-circle" style="width:60px">
+    <span class="right text-success">now</span>
+    <h4 style="display: inline-block;"> Ahmed M.Shaban</h4><br>
+    </div>
+    <hr >
+    <p>${post.textContent}</p>
+   <div>
+    <button type="button" class="col-3"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button> 
+    <button type="button" class="col-4"><i class="fa fa-comment"></i> &nbsp;Comment</button> 
+   </div>
+  </div> `
+       
+    }
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 </body>
